@@ -19,6 +19,15 @@ a {
     color: #333333; 
 }
 
+.container {
+    max-width: 1450px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 a:hover, a:focus, button:hover, button:focus, button:visited, form:hover, form:focus, input:hover, input:focus {
     outline: none;
     text-decoration: none; 
@@ -36,3 +45,106 @@ img {
 .abc.a {
     color: var(--primary-color);
 }
+#footer {
+    padding: 50px 0px 25px 0px;
+    background-image: url(/images/gallery/footer/starlight_black_slab_web_05828c24ebcb4da4b0ed7b5c9f2145fd.jpg);
+    position: relative;
+    background-attachment: fixed;
+}
+
+#footer::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.footerTopContentItemBig {
+    width: 482px;
+}
+
+.footerTopContentItem {
+    width: 187px;
+}
+
+#footer .container {
+    position: relative;
+    z-index: 2;
+}
+
+.footerTopContent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footerText {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footerSocial ul {
+    color: #fff;
+    font-size: 22px;
+    display: flex;
+    justify-content: start;
+    padding-left: 0;
+}
+
+.contact-1 {
+    margin-bottom: 5px;
+}
+
+#footer .footerTop .footerText ul {
+    list-style: none;
+    padding: 0;
+}
+
+#footer .footerTop .footerText ul li {
+    margin-bottom: 10px;
+}
+
+#footer .footerTop .footerText ul li i {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#footer .footerMainList ul li {
+    padding: 10px 0px;
+}
+
+#footer .footerMainList ul li a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff;
+} 
+
+.footerBottom {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #fff;
+}
+
+.ft_map {
+    margin-top: 15px;
+}
+
+.video-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    padding-bottom: 56.25%;
+    width: auto;
+    height: 300px;
+}
+
+
+
+
+
+
+
