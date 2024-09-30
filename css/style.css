@@ -45,6 +45,103 @@ img {
 .abc.a {
     color: var(--primary-color);
 }
+
+/* About-us */
+.intro-section {
+    height: 500px;
+    position: relative;
+}
+
+.intro-section h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #e2e2e2;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.contact_section-content {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.contact_section-content h2 {
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+    color: #464646;
+}
+
+.contact_section-content h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background-color: #00916d;
+}
+
+.contact_section-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #464646;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact_section-content .contact-section-form .form-control {
+    background: #e8e9ea;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 15px;
+    color: #464646;
+}
+
+.contact_section-content .contact-section-form button {
+    border: 1px solid #333333;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 700;
+    color: #464646;
+}
+
+.contact-section-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-section-info .contact-section-info-left  {
+    width: 50%;
+    position: relative;
+}
+
+.contact-section-info .contact-section-info-left .contact-section-info-left-wrap {
+    position: absolute;
+    left: calc(50vw - 600px);
+    top: 50%;
+    transform: translateY(-50%);
+    color: #e2e2e2;
+}
+
+.contact-section-info .contact-section-info-left .contact-section-info-left-wrap h4 {
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.contact-section-info .contact-section-info-left .contact-section-info-left-wrap p {
+    font-weight: 300;
+    font-size: 13px;
+}
+
+
+/* Footer */
 #footer {
     padding: 50px 0px 25px 0px;
     background-image: url(/images/gallery/footer/starlight_black_slab_web_05828c24ebcb4da4b0ed7b5c9f2145fd.jpg);
@@ -141,6 +238,8 @@ img {
     width: auto;
     height: 300px;
 }
+
+
 
 
 
