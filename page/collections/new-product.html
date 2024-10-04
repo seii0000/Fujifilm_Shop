@@ -13,8 +13,250 @@
       <h1 class="text-white">Đây là Header</h1>
     </header>
 
-    <main id="main" class="bg-black">
-      <h1 class="text-white">Đây là Main</h1>
+    <main>
+        <div id="collection">
+            <div class="breadcrumb-shop">
+                <div class="breadcrumb-wrap container container-xl">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+                    <li class="breadcrumb-item active"><span>Sản Phẩm Mới</span></li>
+                </ol>
+            </div>
+            <div class="collectionMain">
+                <div class="container">
+                    <div class="collectionMainContent">
+                        <div class="collectionMainContentLeft">
+                            <h1 class="title">
+                                Sản Phẩm Mới
+                            </h1>
+                            <div class="collectionFilter">
+                                <div class="collectionFilterBlock">
+                                    <h4 style="font-size: 16px; text-transform: uppercase; margin: 0;">
+                                        Dòng sản phẩm
+                                    </h4>
+                                    <ul class="collectionFilterList">
+                                        <li>
+                                            <input type="checkbox" id="data-type-p1" value="X Series" class="checkboxFilter" name="typeFilter">
+                                            <label for="data-type-p1">X Series</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="data-type-p2" value="Instax" class="checkboxFilter" name="typeFilter">
+                                            <label for="data-type-p2">Instax</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="data-type-p3" value="GFX Series" class="checkboxFilter" name="typeFilter">
+                                            <label for="data-type-p3">GFX Series</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="data-type-p4" value="Ngàm GF" class="checkboxFilter" name="typeFilter">
+                                            <label for="data-type-p4">Ngàm GF</label>
+                                        </li>
+                                    </ul>
+                                    <div class="text-center">
+                                        <a href="javascript:void(0);" class="loadNotColorFilter">Xem thêm</a> 
+                                    </div>
+                                </div>
+                                <div class="collectionFilterBlock">
+                                    <h4>
+                                        Thương hiệu
+                                    </h4>
+                                    <ul class="collectionFilterList">
+                                        <li>
+                                            <input type="checkbox" id="data-brand-p1" value="Fujifilm" class="checkboxFilter" name="vendorFilter">
+                                            <label for="data-brand-p1">Fujifilm</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="data-brand-p2" value="Fujinon" class="checkboxFilter" name="vendorFilter">
+                                            <label for="data-brand-p2">Fujinon</label>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                                <div class="collectionFilterBlock">
+                                    <h4>
+                                        Loại
+                                    </h4>
+                                    <ul class="collectionFilterList">
+                                        <li>
+                                            <input type="checkbox" id="data-variant-p1" value="Máy ảnh không gương lật" class="checkboxFilter" name="sizeFilter">
+                                            <label for="data-variant-p1">Máy ảnh không gương lật</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" id="data-variant-p2" value="Máy ảnh Compact" class="checkboxFilter" name="sizeFilter">
+                                            <label for="data-variant-p2">Máy ảnh Compact</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- <div class="collectionFilterBlock color">
+                                    <h4>
+                                        Màu sắc
+                                    </h4>
+                                    <ul style="padding: 0;margin: 0;" class="collectionFilterList">
+                                        <li class="trang">
+                                            <input type="checkbox" id="data-color-p1" value="trang" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p1">
+                                                <span>Trắng</span>
+                                            </label>
+                                        </li>
+                                        <li class="den">
+                                            <input type="checkbox" id="data-color-p2" value="den" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p2">
+                                                <span>Đen</span>
+                                            </label>
+                                        </li>
+                                        <li class="dendura">
+                                            <input type="checkbox" id="data-color-p3" value="dendura" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p3">
+                                                <span>Đen Dura</span>
+                                            </label>
+                                        </li>
+                                        <li class="bacdura">
+                                            <input type="checkbox" id="data-color-p4" value="bacdura" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p4">
+                                                <span>Bạc Dura</span>
+                                            </label>
+                                        </li>
+                                        <li class="bacdam">
+                                            <input type="checkbox" id="data-color-p5" value="bacdam" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p5">
+                                                <span>Bạc Đậm</span>
+                                            </label>
+                                        </li>
+                                        <li class="graphite">
+                                            <input type="checkbox" id="data-color-p6" value="graphite" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p6">
+                                                <span>Graphite</span>
+                                            </label>
+                                        </li>
+                                        <li class="bac">
+                                            <input type="checkbox" id="data-color-p7" value="bac" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p7">
+                                                <span>Bạc</span>
+                                            </label>
+                                        </li>
+                                        <li class="nau">
+                                            <input type="checkbox" id="data-color-p8" value="nau" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p8">
+                                                <span>Nâu</span>
+                                            </label>
+                                        </li>
+                                        <li class="hong">
+                                            <input type="checkbox" id="data-color-p9" value="hong" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p9">
+                                                <span>Hồng</span>
+                                            </label>
+                                        </li>
+                                        <li class="tim">
+                                            <input type="checkbox" id="data-color-p10" value="tim" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p10">
+                                                <span>Tím</span>
+                                            </label>
+                                        </li>
+                                        <li class="xanhduong">
+                                            <input type="checkbox" id="data-color-p11" value="xanhduong" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p11">
+                                                <span>Xanh Dương</span>
+                                            </label>
+                                        </li>
+                                        <li class="do">
+                                            <input type="checkbox" id="data-color-p12" value="do" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p12">
+                                                <span>Đỏ</span>
+                                            </label>
+                                        </li>
+                                        <li class="xanhla">
+                                            <input type="checkbox" id="data-color-p13" value="xanhla" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p13">
+                                                <span>Xanh Lá</span>
+                                            </label>
+                                        </li>
+                                        <li class="cam">
+                                            <input type="checkbox" id="data-color-p14" value="cam" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p14">
+                                                <span>Cam</span>
+                                            </label>
+                                        </li>
+                                        <li class="toffee">
+                                            <input type="checkbox" id="data-color-p15" value="toffee" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p15">
+                                                <span>Toffee</span>
+                                            </label>
+                                        </li>
+                                        <li class="xamchi">
+                                            <input type="checkbox" id="data-color-p16" value="xamchi" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p16">
+                                                <span>Xám chì </span>
+                                            </label>
+                                        </li>
+                                        <li class="stonewhite">
+                                            <input type="checkbox" id="data-color-p17" value="stonewhite" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p17">
+                                                <span>STONE WHITE</span>
+                                            </label>
+                                        </li>
+                                        <li class="elegantblack">
+                                            <input type="checkbox" id="data-color-p18" value="elegantblack" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p18">
+                                                <span>ELEGANT BLACK</span>
+                                            </label>
+                                        </li>
+                                        <li class="blushgold">
+                                            <input type="checkbox" id="data-color-p19" value="blushgold" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p19">
+                                                <span>BLUSH GOLD</span>
+                                            </label>
+                                        </li>
+                                        <li class="brown">
+                                            <input type="checkbox" id="data-color-p20" value="brown" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p20">
+                                                <span>Brown</span>
+                                            </label>
+                                        </li>
+                                        <li class="charcoal">
+                                            <input type="checkbox" id="data-color-p21" value="charcoal" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p21">
+                                                <span>Charcoal</span>
+                                            </label>
+                                        </li>
+                                        <li class="navy">
+                                            <input type="checkbox" id="data-color-p22" value="navy" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p22">
+                                                <span>Navy</span>
+                                            </label>
+                                        </li>
+                                        <li class="olive">
+                                            <input type="checkbox" id="data-color-p23" value="olive" class="checkboxFilter" name="colorFilter">
+                                            <label for="data-color-p23">
+                                                <span>Olive</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="text-center">
+                                        <a href="javascript:void(0);" id="loadColorFilter">Xem thêm</a>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="collectionFilterBlock">
+                                    <h4>
+                                        Giá sản phẩm
+                                    </h4>
+                                    <div class="priceRangeBox">
+                                        <div id="priceRange" class="noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr"><div class="noUi-base"><div class="noUi-connects"><div class="noUi-connect" style="transform: translate(0%, 0px) scale(1, 1);"></div></div><div class="noUi-origin" style="transform: translate(-1000%, 0px); z-index: 5;"><div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="300000000.0" aria-valuenow="0.0" aria-valuetext="0.00"><div class="noUi-touch-area"></div></div></div><div class="noUi-origin" style="transform: translate(0%, 0px); z-index: 4;"><div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider" aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="300000000.0" aria-valuenow="300000000.0" aria-valuetext="300000000.00"><div class="noUi-touch-area"></div></div></div></div></div>
+                                        <div class="priceRangeValueBox d-flex pt-3">
+                                            <input style="display:none;" type="checkbox" id="data-price" value="" class="checkboxFilter" name="priceFilter">
+                                            <span class="example-val" id="priceRangeValue">0₫ - 300,000,000₫</span>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="collectionMainContentRight">
+
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer id="footer">

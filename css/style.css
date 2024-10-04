@@ -19,6 +19,22 @@ a {
     color: #333333; 
 }
 
+/* input[type="checkbox"] {
+    margin-top: 0;
+    vertical-align: top;
+    width: 18px;
+    height: 18px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    margin: 0 1rem 0 0;
+    cursor: pointer;
+    outline: 0 !important;
+    border: none;
+    box-shadow: none;
+} */
+
 .container {
     max-width: 1450px;
     width: 100%;
@@ -326,6 +342,128 @@ img {
 .article-title a {
     color: #00916d;
     text-decoration: none;
+}
+
+/* Collection */
+#collection .collectionMain .collectionMainContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#collection .collectionMain .collectionMainContent .collectionMainContentLeft {
+    width: 22.5%;
+    margin-right: 5%;
+}
+
+.collectionFilter {
+    padding-bottom: 10px;
+}
+
+.collectionFilterBlock {
+    background: #f9f9f9;
+}
+
+
+.collectionFilter .collectionFilterBlock {
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.collectionFilter .collectionFilterBlock.color ul.collectionFilterList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.collectionFilter .collectionFilterBlock.color ul.collectionFilterList li {
+    width: calc(100% / 3);;
+    text-align: center;
+}
+
+.collectionFilter .collectionFilterBlock.color ul.collectionFilterList li input {
+    display: none;
+}
+
+.collectionFilter .collectionFilterBlock.color ul.collectionFilterList li label {
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.collectionFilterBlock.color ul.collectionFilterList li.trang label:before {
+    background-color: #000000 !important;
+
+}
+
+.collectionFilter .collectionFilterBlock.color ul.collectionFilterList li label:before {
+    display: inline-block;
+    content: '';
+    position: relative;
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    border: 1px solid #e1e1e1;
+}
+
+/* .priceRangeBox .noUi-target {
+    height: 5px;
+    border: none;
+    margin: 20px 0 0 0;
+}
+
+.noUi-target {
+    position: relative;
+    background: #FAFAFA;
+    border-radius: 4px;
+    border: 1px solid #D3D3D3;
+    box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+}
+
+.priceRangeBox .noUi-target .noUi-base {
+    background: #ccc;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.noUi-base, .noUi-connects {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+} */
+
+.collectionFilter .collectionFilterBlock .collectionFilterList {
+    margin-top: 10px;
+}
+
+.collectionFilter .collectionFilterBlock .collectionFilterList li:not(:last-child) {
+    border-bottom: 1px dotted #ccc;
+}
+
+.collectionFilter .collectionFilterBlock .collectionFilterList li {
+    display: flex;
+    align-items: center;
+}
+
+a#loadColorFilter, a.loadNotColorFilter {
+    color: #333333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.collectionFilter .collectionFilterBlock .collectionFilterList li label {
+    margin: 0;
+    font-size: 14px;
+    padding: 12px 15px 10px;
+    display: block;
+    width: 100%;
+}
+
+
+#collection .collectionMain .collectionMainContent .collectionMainContentRight {
+    width: 72.5%;
 }
 
 
