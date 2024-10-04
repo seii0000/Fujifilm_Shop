@@ -140,6 +140,194 @@ img {
     font-size: 13px;
 }
 
+/* Blog */
+.blogMain .container .blogMainContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blogMain .container .blogMainContent .blogMainContentLeft {
+    width: 70%;
+    padding-right: 30px;
+}
+
+.blogLoop .blogWrapper .blogImage .blogImageLink {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.blogLoop .blogWrapper .blogDetail .blogDetailPost {
+    padding: 15px 0px;
+    color: #666666;
+}
+
+.blogLoop .blogWrapper .blogDetail .blogDetailName {
+    margin-bottom: 15px;
+}
+
+.blogLoop .blogWrapper .blogDetail .blogDetailName a {
+    font-size: 23px;
+    font-weight: 700;
+    margin-top: 15px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #343a40;
+}
+
+.blogLoop .blogWrapper .blogDetail .blogDetailName a:hover {
+    color: #00916d;
+}
+
+.blogLoop .blogWrapper .blogDetail .blogDetailName:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #00916d;
+    margin-top: 10px;
+}
+
+.blogLoop .blogWrapper .blogDetailDescription {
+    color: #666666;
+}
+
+.blogLoop .blogWrapper .blogDetail .blogDetailLink {
+    color: #00916d;
+    line-height: 30px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.blogMain .container .blogMainContent .blogMainContentRight {
+    margin-left: 5%;
+    width: 25%;
+}
+
+#blogSideBar {
+    padding: 0px 15px;
+    position: sticky;
+    top: 0;
+}
+
+#blogSideBar h2 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+#blogSideBar ul {
+    margin: 5px 0px;
+}
+
+#blogSideBar .blogSidebarMenu ul li a {
+    color: #333333;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+#blogSideBar .blogSidebarMenu ul li a:hover {
+    color: #00916d;
+}
+
+#blogSideBar .blogSidebarRecent .blogWrapper {
+    margin-bottom: 10px;
+}
+
+#blogSideBar .blogSidebarRecent .blogWrapper .blogImage {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#blogSideBar .blogSidebarRecent .blogWrapper .blogImage .blogImageLink {
+    display: block;
+    width: 40%;
+}
+
+#blogSideBar .blogSidebarRecent .blogWrapper .blogDetail {
+    display: block;
+    width: 40%;
+}
+
+#blogSideBar .blogSidebarRecent .blogWrapper .blogDetail {
+    width: 55%;
+    margin-left: 5%;
+}
+
+#blogSideBar .blogSidebarRecent .blogWrapper .blogDetail .blogDetailName {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+#blogSideBar .blogSidebarRecent .blogWrapper .blogDetail .blogDetailName a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #333333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#blogSideBar .blogSidebarRecent .blogWrapper .blogDetail .blogDetailName a:hover {
+    color: #00916d;
+}
+
+.articleBody {
+    padding-right: 15px;
+}
+
+.articleName {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.articleInfo {
+    padding: 15px 0px;
+}
+
+.articleNext {
+    float: right;
+}
+
+.item_bst {
+    width: 25%;
+    float: left;
+}
+
+#pagniation {
+    margin-top: 20px;
+    clear: both;
+}
+
+.article-item {
+    padding: 5px;
+}
+
+.article-img {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.article-title {
+    padding: 6px 0 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.article-title a {
+    color: #00916d;
+    text-decoration: none;
+}
+
 
 /* Footer */
 #footer {
