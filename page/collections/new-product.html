@@ -250,9 +250,33 @@
                             </div>
                         </div>
                         <div class="collectionMainContentRight">
-
+                          <div class="collectionHeader">
+                            <div class="row">
+                              <div class="col-md-4 col-sm-12 col-3">
+                                <!-- <div class="filterMobile headerTool"><a href="" data-type="sidebarAllFilter"><i class="lni lni-funnel"></i> Bộ lọc</a></div> -->
+                              </div>
+                              <div style="text-align: right;" class="col-md-8 col-9">
+                                <div class="sortByMain">
+                                  <label class="collectionHeaderRow" for="sortBy">Sắp xếp theo:</label>
+                                  <select id="sortBy" class="form-control">
+                                    <option value="manual">Sản phẩm nổi bật</option>
+                                    <option value="price-ascending" data-filter="&amp;sortby=(price:product=asc)">Giá: Tăng dần</option>
+                                    <option value="price-descending" data-filter="&amp;sortby=(price:product=desc)">Giá: Giảm dần</option>
+                                    <option value="title-ascending" data-filter="&amp;sortby=(title:product=asc)">Tên: A-Z</option>
+                                    <option value="title-descending" data-filter="&amp;sortby=(price:product=desc)">Tên: Z-A</option>
+                                    <option value="created-ascending" data-filter="&amp;sortby=(updated_at:product=desc)">Cũ nhất</option>
+                                    <option value="created-descending" data-filter="&amp;sortby=(updated_at:product=asc)">Mới nhất</option>
+                                    <option value="best-selling" data-filter="&amp;sortby=(sold_quantity:product=desc)">Bán chạy nhất</option>
+                                    <option value="quantity-descending">Tồn kho: Giảm dần</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="collectionBody">
+                            <!-- Products -->
+                          </div>
                         </div>
-                            
                     </div>
                 </div>
             </div>
