@@ -18,6 +18,9 @@ ul, ol {
 a {
     color: #333333; 
 }
+*{
+    text-decoration: none;
+}
 
 /* input[type="checkbox"] {
     margin-top: 0;
@@ -44,6 +47,9 @@ a {
     margin-left: auto;
 }
 
+
+
+
 a:hover, a:focus, button:hover, button:focus, button:visited, form:hover, form:focus, input:hover, input:focus {
     outline: none;
     text-decoration: none; 
@@ -57,6 +63,7 @@ img {
     max-width: 100%;
     height: auto; 
 }
+
 
 .abc.a {
     color: var(--primary-color);
