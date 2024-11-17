@@ -48,7 +48,577 @@ a {
 }
 
 
+#header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 999;
+    transition: all 0.4s;
+    transform: translateY(0);
+    box-shadow: 0px 2px 4px rgba(40, 40, 40, 0.3); 
+}
 
+#header .container .headerMain {
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+}
+
+#header .container .headerMain .headerLeft {
+        width: 20%;
+        padding-right: 20px; 
+}
+
+#header .container .headerMain .headerLeft .headerLogo img {
+    max-height: 50px; 
+    display: flex;
+}
+
+#header .headerMain .headerCenter {
+    width: 50%; 
+}
+
+#header .headerMain .headerCenter .headerSearch {
+    position: relative;
+    width: 100%;
+    margin: 0; 
+}
+
+#header .headerMain .headerCenter .headerSearch .headerSearchMain {
+    display: flex; 
+}
+=======
+
+>>>>>>> cfb46a505f42cf067094ac497561354d7f6860e2
+=======
+
+>>>>>>> origin/main
+
+
+a:hover, a:focus, button:hover, button:focus, button:visited, form:hover, form:focus, input:hover, input:focus {
+    outline: none;
+    text-decoration: none; 
+}
+  
+#header .headerMain .headerCenter .headerSearch .headerSearchMain .headerSearchInput {
+    width: 100%;
+    padding: 0px 50px 0px 20px;
+    height: 35px;
+    line-height: 50px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px; 
+}
+
+#header .headerMain .headerCenter .headerSearch .headerSearchButton {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-size: 20px;
+    width: 40px;
+    height: 35px;
+    line-height: 25px;
+    background: #00916d;
+    text-align: center;
+    color: #e2e2e2;
+    border-radius: 0 5px 5px 0; 
+}
+
+#header .headerMain .headerCenter .headerSmartSearch .headerSmartSearchResult {
+    position: absolute;
+    background: #fff;
+    z-index: 9;
+    width: 95%;
+    left: 0%;
+    box-shadow: 0px 3px 6px rgba(40, 40, 40, 0.2);
+    margin: 0px 10px;
+    padding: 15px;
+    border-radius: 5px;
+    display: none; 
+}
+
+#header .headerMain .headerCenter .headerSmartSearch .headerSmartSearchResult p {
+    margin-bottom: 0; 
+}
+
+#header .headerMain .headerCenter .headerSmartSearch .headerSmartSearchResult a {
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+#header .headerMain .headerCenter .headerSmartSearch .headerSmartSearchResult a img {
+    min-width: 75px;
+    width: 75px;
+    margin-right: 10px;
+    height: auto; 
+}
+
+#header .headerMain .headerCenter .headerSmartSearch .headerSmartSearchResult a span {
+    font-weight: 500; 
+}
+
+#header .headerMain .headerCenter .headerSmartSearch .headerSmartSearchResult a span span {
+    display: block;
+    color: #333333; 
+}
+
+#header .headerMain .headerRight {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
+
+#header .headerMain .headerRight .headerPhone {
+    display: flex;
+    align-items: center; 
+}
+
+#header .headerMain .headerRight .headerPhone .headerPhoneDetail {
+    margin-left: 10px; 
+}
+
+#header .headerMain .headerRight .headerPhone .headerPhoneDetail a {
+    display: block; 
+}
+
+#header .headerMain .headerRight .headerPhone .headerPhoneDetail a:nth-child(2) {
+    font-weight: 700; 
+}
+
+#header .headerMain .headerRight .headerTool i, #header .headerMain .headerRight .headerUser i, #header .headerMain .headerRight .headerCompare i {
+    font-size: 20px; 
+}
+
+#header .headerMain .headerRight .headerCart, #header .headerMain .headerRight .headerWishlist, #header .headerMain .headerRight .headerCompare {
+    position: relative; 
+}
+
+#header .headerMain .headerRight .headerCart .count, #header .headerMain .headerRight .headerWishlist .count, #header .headerMain .headerRight .headerCompare .count {
+    position: absolute;
+    top: -12.5px;
+    right: -12.5px;
+    background: #00916d;
+    color: #e2e2e2;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 999px;
+    font-size: 11px; 
+}
+
+#header .headerMain .headerRight .headerMenuClick {
+    display: none; 
+}
+
+#header .headerMenu {
+    background: #00916d;
+    position: relative; 
+}
+
+#header .headerMenu .headerMenuMain {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 46px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft {
+    padding: 0;
+    width: 20%;
+    color: #e2e2e2;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    height: 100%;
+    position: relative; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft i {
+    font-size: 20px;
+    padding: 5px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft span {
+    font-weight: 700;
+    margin-left: 10px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft:hover .mainNav {
+    visibility: visible;
+    transform: scaleY(1); 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav {
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all .4s;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #fff;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li {
+    padding: 10px 0px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li:not(:last-child) {
+    border-bottom: 1px dotted #e1e1e1; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li.active > a {
+    color: #333333; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li > a {
+    display: block; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li > a i {
+    border: none !important;
+    font-size: 10px;
+    float: right; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li:hover .subMenuTwo {
+    visibility: visible; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo {
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    left: calc(100% + 1px);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+    z-index: 999;
+    top: -1px;
+    width: 100%;
+    position: absolute;
+    width: 1000px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-height: calc(100% + 2px);
+    overflow-y: scroll; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo::-webkit-scrollbar {
+    width: 2.5px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo::-webkit-scrollbar-thumb {
+    background: #00916d; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo .subMenuTwoColumOne {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo .subMenuTwoColumOne .subMenuItem {
+    width: calc(100% / 4);
+    padding: 10px 0px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo .subMenuTwoColumOne .subMenuItem > a {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo .subMenuTwoColumOne .subMenuItem > a i {
+    border: none !important;
+    font-size: 10px;
+    float: right;
+    transition: all .3s linear; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo .subMenuTwoColumOne .subMenuItem > a i.activeMenuVertical {
+    transform: rotate(90deg); 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo .subMenuTwoColumOne .subMenuItem ul {
+    padding-top: 15px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo .subMenuTwoColumOne .subMenuItem ul li {
+    padding: 5px 0px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo .subMenuTwoColumOne .subMenuItem ul li a {
+    color: #999;
+    font-size: 14px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo .subMenuTwoColumTwo {
+    width: 20%;
+    display: flex;
+    justify-content: center; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li .subMenuTwo .subMenuTwoColumTwo img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter {
+    width: 60%; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul {
+    display: inline-flex; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li > a {
+    height: 46px;
+    line-height: 46px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega {
+    padding: 0px 10px;
+    display: inline-block;
+    white-space: nowrap; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega.active a {
+    color: #e2e2e2;
+    font-weight: 700; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega > a {
+    color: #e2e2e2; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega > a i {
+    font-size: 10px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega:hover > a {
+    color: #e2e2e2; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega:hover .subMenuTwo {
+    visibility: visible;
+    transform: scaleY(1); 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo {
+    display: flex;
+    visibility: hidden;
+    transition: transform 0.4s;
+    transform: scaleY(0);
+    transform-origin: top;
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    width: 100%;
+    padding: 20px 0px;
+    top: 100%;
+    left: 0; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumOne {
+    padding-left: 30px;
+    width: 15%;
+    position: relative; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumOne.haveThree {
+    width: 30%; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumOne.haveThree .subMenuItem {
+    width: 40%; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumOne.border-right-new {
+    padding-right: 20px;
+    border-right: 1px solid #e1e1e1; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumOne .subMenuItem {
+    width: 100%;
+    margin: 10px 0px;
+    display: block;
+    white-space: initial; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumOne .subMenuItem.hasChild {
+    display: flex; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumOne .subMenuItem.hasChild i {
+    font-size: 10px;
+    font-weight: 700;
+    margin-left: 10px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumOne .subMenuItem > a {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumOne .subMenuItem.activeMenuTwo > a {
+    color: #00916d; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumOne .subMenuItem > .subMenuThree {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 0; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumOne .subMenuItem > .subMenuThree li {
+    margin: 10px 0px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumOne .subMenuItem > .subMenuThree li:hover > a {
+    color: #00916d; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumOne .subMenuItem > .subMenuThree li a {
+    display: block;
+    text-transform: capitalize; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumTwo {
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumTwo.haveThree {
+    width: 70%; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumTwo .subMenuItem {
+    width: 45%; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li.haveMega .subMenuTwo .subMenuTwoColumTwo .subMenuItem a {
+    display: block;
+    margin: 10px 0px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega) {
+    position: relative;
+    padding: 0 10px;
+    display: inline-block;
+    white-space: nowrap; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega):hover > a {
+    color: #e2e2e2; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega):hover .subMenu {
+    visibility: visible;
+    transform: scaleY(1); 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega) > a {
+    color: #e2e2e2; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega) > a i {
+    font-size: 10px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega) ul.subMenu {
+    visibility: hidden;
+    transition: all .4s;
+    transform: scaleY(0);
+    transform-origin: top;
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(40, 40, 40, 0.3);
+    top: 100%;
+    left: 0;
+    width: 200px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega) ul.subMenu .subMenuItem {
+    width: 100%;
+    padding: 10px 20px;
+    display: block;
+    white-space: initial;
+    position: relative; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega) ul.subMenu .subMenuItem a {
+    display: block; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega) ul.subMenu .subMenuItem a i {
+    font-size: 10px;
+    float: right;
+    margin-top: 5px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega) ul.subMenu .subMenuItem:hover > a {
+    color: #00916d; 
+}
+
+header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega) ul.subMenu .subMenuItem:hover .subMenuThree {
+    visibility: visible;
+    transform: scaleX(1); 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega) ul.subMenu .subMenuItem > .subMenuThree {
+    visibility: hidden;
+    transition: all .4s;
+    transform: scaleX(0);
+    transform-origin: left;
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(40, 40, 40, 0.3);
+    top: 0;
+    left: 100%;
+    width: 200px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega) ul.subMenu .subMenuItem > .subMenuThree li {
+    padding: 10px 20px; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega) ul.subMenu .subMenuItem > .subMenuThree li:hover > a {
+    color: #00916d; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainCenter .mainNav > ul > li:not(.haveMega) ul.subMenu .subMenuItem > .subMenuThree li a {
+    display: block;
+    text-transform: capitalize; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainRight {
+    width: 20%;
+    text-align: center; 
+}
+
+#header .headerMenu .headerMenuMain .headerMenuMainRight span {
+    color: #e2e2e2; 
+}
 
 a:hover, a:focus, button:hover, button:focus, button:visited, form:hover, form:focus, input:hover, input:focus {
     outline: none;
