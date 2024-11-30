@@ -5,14 +5,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>adiShop</title>
-  <link rel="stylesheet" href="/page/css/style.css"/>
+  <link rel="stylesheet" href="/Fujifilm_Shop/page/style.css"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
 </head>
 
 <body>
-
   <header id="header">
     <div class="container">
       <div class="headerMain">
@@ -35,6 +34,11 @@
                 "Tìm kiếm sản phẩm..." aria-label="Search" />
               </div>
             </form>
+            <button type="submit" class="headerSearchButton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85zm-5.442 1.398a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/>
+              </svg>
+            </button>
             <div class="headerSmartSearch">
               <div class="headerSmartSearchResult"></div>
             </div>
@@ -42,49 +46,68 @@
         </div>
         <div class="headerRight">
           <div class="headerPhone">
-            <a href="tel:(028)%203939%200847"><svg style=
-            "fill: #4c4c4c" version="1.1" width="30" height="30"
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink=
-            "http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox=
-            "0 0 473.806 473.806" xml:space="preserve">
-            <path d=
-            "M374.456,293.506c-9.7-10.1-21.4-15.5-33.8-15.5c-12.3,0-24.1,5.3-34.2,15.4l-31.6,31.5c-2.6-1.4-5.2-2.7-7.7-4 c-3.6-1.8-7-3.5-9.9-5.3c-29.6-18.8-56.5-43.3-82.3-75c-12.5-15.8-20.9-29.1-27-42.6c8.2-7.5,15.8-15.3,23.2-22.8 c2.8-2.8,5.6-5.7,8.4-8.5c21-21,21-48.2,0-69.2l-27.3-27.3c-3.1-3.1-6.3-6.3-9.3-9.5c-6-6.2-12.3-12.6-18.8-18.6 c-9.7-9.6-21.3-14.7-33.5-14.7s-24,5.1-34,14.7c-0.1,0.1-0.1,0.1-0.2,0.2l-34,34.3c-12.8,12.8-20.1,28.4-21.7,46.5 c-2.4,29.2,6.2,56.4,12.8,74.2c16.2,43.7,40.4,84.2,76.5,127.6c43.8,52.3,96.5,93.6,156.7,122.7c23,10.9,53.7,23.8,88,26 c2.1,0.1,4.3,0.2,6.3,0.2c23.1,0,42.5-8.3,57.7-24.8c0.1-0.2,0.3-0.3,0.4-0.5c5.2-6.3,11.2-12,17.5-18.1c4.3-4.1,8.7-8.4,13-12.9 c9.9-10.3,15.1-22.3,15.1-34.6c0-12.4-5.3-24.3-15.4-34.3L374.456,293.506z M410.256,398.806 C410.156,398.806,410.156,398.906,410.256,398.806c-3.9,4.2-7.9,8-12.2,12.2c-6.5,6.2-13.1,12.7-19.3,20 c-10.1,10.8-22,15.9-37.6,15.9c-1.5,0-3.1,0-4.6-0.1c-29.7-1.9-57.3-13.5-78-23.4c-56.6-27.4-106.3-66.3-147.6-115.6 c-34.1-41.1-56.9-79.1-72-119.9c-9.3-24.9-12.7-44.3-11.2-62.6c1-11.7,5.5-21.4,13.8-29.7l34.1-34.1c4.9-4.6,10.1-7.1,15.2-7.1 c6.3,0,11.4,3.8,14.6,7c0.1,0.1,0.2,0.2,0.3,0.3c6.1,5.7,11.9,11.6,18,17.9c3.1,3.2,6.3,6.4,9.5,9.7l27.3,27.3 c10.6,10.6,10.6,20.4,0,31c-2.9,2.9-5.7,5.8-8.6,8.6c-8.4,8.6-16.4,16.6-25.1,24.4c-0.2,0.2-0.4,0.3-0.5,0.5 c-8.6,8.6-7,17-5.2,22.7c0.1,0.3,0.2,0.6,0.3,0.9c7.1,17.2,17.1,33.4,32.3,52.7l0.1,0.1c27.6,34,56.7,60.5,88.8,80.8 c4.1,2.6,8.3,4.7,12.3,6.7c3.6,1.8,7,3.5,9.9,5.3c0.4,0.2,0.8,0.5,1.2,0.7c3.4,1.7,6.6,2.5,9.9,2.5c8.3,0,13.5-5.2,15.2-6.9 l34.2-34.2c3.4-3.4,8.8-7.5,15.1-7.5c6.2,0,11.3,3.9,14.4,7.3c0.1,0.1,0.1,0.1,0.2,0.2l55.1,55.1 C420.456,377.706,420.456,388.206,410.256,398.806z">
-            </path>
-            <path d=
-            "M256.056,112.706c26.2,4.4,50,16.8,69,35.8s31.3,42.8,35.8,69c1.1,6.6,6.8,11.2,13.3,11.2c0.8,0,1.5-0.1,2.3-0.2 c7.4-1.2,12.3-8.2,11.1-15.6c-5.4-31.7-20.4-60.6-43.3-83.5s-51.8-37.9-83.5-43.3c-7.4-1.2-14.3,3.7-15.6,11 S248.656,111.506,256.056,112.706z">
-            </path>
-            <path d=
-            "M473.256,209.006c-8.9-52.2-33.5-99.7-71.3-137.5s-85.3-62.4-137.5-71.3c-7.3-1.3-14.2,3.7-15.5,11 c-1.2,7.4,3.7,14.3,11.1,15.6c46.6,7.9,89.1,30,122.9,63.7c33.8,33.8,55.8,76.3,63.7,122.9c1.1,6.6,6.8,11.2,13.3,11.2 c0.8,0,1.5-0.1,2.3-0.2C469.556,223.306,474.556,216.306,473.256,209.006z">
-            </path></svg></a>
+            <a href="tel:(028) 3939 0847">
+              <svg style="fill: #4c4c4c" version="1.1" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 473.806 473.806" xml:space="preserve">
+                <path d="M374.456,293.506c-9.7-10.1-21.4-15.5-33.8-15.5c-12.3,0-24.1,5.3-34.2,15.4l-31.6,31.5c-2.6-1.4-5.2-2.7-7.7-4
+                         c-3.6-1.8-7-3.5-9.9-5.3c-29.6-18.8-56.5-43.3-82.3-75c-12.5-15.8-20.9-29.1-27-42.6c8.2-7.5,15.8-15.3,23.2-22.8
+                         c2.8-2.8,5.6-5.7,8.4-8.5c21-21,21-48.2,0-69.2l-27.3-27.3c-3.1-3.1-6.3-6.3-9.3-9.5c-6-6.2-12.3-12.6-18.8-18.6
+                         c-9.7-9.6-21.3-14.7-33.5-14.7s-24,5.1-34,14.7c-0.1,0.1-0.1,0.1-0.2,0.2l-34,34.3c-12.8,12.8-20.1,28.4-21.7,46.5
+                         c-2.4,29.2,6.2,56.4,12.8,74.2c16.2,43.7,40.4,84.2,76.5,127.6c43.8,52.3,96.5,93.6,156.7,122.7c23,10.9,53.7,23.8,88,26
+                         c2.1,0.1,4.3,0.2,6.3,0.2c23.1,0,42.5-8.3,57.7-24.8c0.1-0.2,0.3-0.3,0.4-0.5c5.2-6.3,11.2-12,17.5-18.1c4.3-4.1,8.7-8.4,13-12.9
+                         c9.9-10.3,15.1-22.3,15.1-34.6c0-12.4-5.3-24.3-15.4-34.3L374.456,293.506z M410.256,398.806
+                         C410.156,398.806,410.156,398.906,410.256,398.806c-3.9,4.2-7.9,8-12.2,12.2c-6.5,6.2-13.1,12.7-19.3,20
+                         c-10.1,10.8-22,15.9-37.6,15.9c-1.5,0-3.1,0-4.6-0.1c-29.7-1.9-57.3-13.5-78-23.4c-56.6-27.4-106.3-66.3-147.6-115.6
+                         c-34.1-41.1-56.9-79.1-72-119.9c-9.3-24.9-12.7-44.3-11.2-62.6c1-11.7,5.5-21.4,13.8-29.7l34.1-34.1c4.9-4.6,10.1-7.1,15.2-7.1
+                         c6.3,0,11.4,3.8,14.6,7c0.1,0.1,0.2,0.2,0.3,0.3c6.1,5.7,11.9,11.6,18,17.9c3.1,3.2,6.3,6.4,9.5,9.7l27.3,27.3
+                         c10.6,10.6,10.6,20.4,0,31c-2.9,2.9-5.7,5.8-8.6,8.6c-8.4,8.6-16.4,16.6-25.1,24.4c-0.2,0.2-0.4,0.3-0.5,0.5
+                         c-8.6,8.6-7,17-5.2,22.7c0.1,0.3,0.2,0.6,0.3,0.9c7.1,17.2,17.1,33.4,32.3,52.7l0.1,0.1c27.6,34,56.7,60.5,88.8,80.8
+                         c4.1,2.6,8.3,4.7,12.3,6.7c3.6,1.8,7,3.5,9.9,5.3c0.4,0.2,0.8,0.5,1.2,0.7c3.4,1.7,6.6,2.5,9.9,2.5c8.3,0,13.5-5.2,15.2-6.9
+                         l34.2-34.2c3.4-3.4,8.8-7.5,15.1-7.5c6.2,0,11.3,3.9,14.4,7.3c0.1,0.1,0.1,0.1,0.2,0.2l55.1,55.1
+                         C420.456,377.706,420.456,388.206,410.256,398.806z"></path>
+                <path d="M256.056,112.706c26.2,4.4,50,16.8,69,35.8s31.3,42.8,35.8,69c1.1,6.6,6.8,11.2,13.3,11.2c0.8,0,1.5-0.1,2.3-0.2
+                         c7.4-1.2,12.3-8.2,11.1-15.6c-5.4-31.7-20.4-60.6-43.3-83.5s-51.8-37.9-83.5-43.3c-7.4-1.2-14.3,3.7-15.6,11
+                         S248.656,111.506,256.056,112.706z"></path>
+                <path d="M473.256,209.006c-8.9-52.2-33.5-99.7-71.3-137.5s-85.3-62.4-137.5-71.3c-7.3-1.3-14.2,3.7-15.5,11
+                         c-1.2,7.4,3.7,14.3,11.1,15.6c46.6,7.9,89.1,30,122.9,63.7c33.8,33.8,55.8,76.3,63.7,122.9c1.1,6.6,6.8,11.2,13.3,11.2
+                         c0.8,0,1.5-0.1,2.3-0.2C469.556,223.306,474.556,216.306,473.256,209.006z"></path>
+              </svg>
+            </a>
+            
             <div class="headerPhoneDetail">
-              <a>Hotline:</a> <a href=
-              "tel:(028)%203939%200847">(028) 3939 0847</a>
+              <a>Hotline:</a>
+              <a href="tel:(028) 3939 0847">(028) 3939 0847</a>
             </div>
-          </div>
+            
+          </div> 
           <div class="headerUser">
-            <a href="javascript:void(0)" data-toggle="modal"
-            data-target="#accountLogin" data-whatever=
-            "@accountLogin"></a>
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#accountLogin" data-whatever="@accountLogin">
+              <i class="lni lni-user"></i>
+            </a>
           </div>
           <div class="headerWishlist headerTool">
-            <a href="/account" data-type=
-            "sidebarAllMainWishlist"><span class=
-            "headerWishlistCount count">0</span></a>
+            <a href="/Fujifilm_Shop/account" data-type="sidebarAllMainWishlist">
+              <i class="lni lni-heart"></i>
+              <span class="headerWishlistCount count">0</span>
+            </a>
           </div>
           <div class="headerCart headerTool">
-            <a href="/cart" data-type=
-            "sidebarAllMainCart"><span class=
-            "headerCartCount count">0</span></a>
+            <a href="/Fujifilm_Shop/cart" data-type="sidebarAllMainCart">
+              <i class="lni lni-shopping-basket"></i>
+              <span class="headerCartCount count">0</span>
+            </a>
           </div>
           <div class="headerCompare headerTool">
-            <a href="" data-type=
-            "sidebarAllMainCompare"><span class=
-            "headerCompareCount count">0</span></a>
+            <a href="" data-type="sidebarAllMainCompare">
+              <i class="lni lni-shuffle"></i>
+              <span class="headerCompareCount count">0</span>
+            </a>
           </div>
           <div class="headerMenuClick headerTool">
-            <a href="" class="showMoreMenuItem" data-type=
-            "sidebarAllMainMenu"></a>
+            <a href="" class="showMoreMenuItem" data-type="sidebarAllMainMenu">
+              <i class="lni lni-menu"></i>
+            </a>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -92,11 +115,14 @@
       <div class="container">
         <div class="headerMenuMain">
           <div class="headerMenuMainLeft">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-justify" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+            </svg>
             <span>DANH MỤC NHÓM</span>
             <nav class="mainNav">
               <ul class="menuMainList">
                 <li class="">
-                  <a href="/pages/about-us" title=
+                  <a href="/Fujifilm_Shop/pages/about-us" title=
                   "Về FUJIFILM"><span><img src=
                   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
                   class="lazyload img-fluid img-ico" alt=
@@ -113,7 +139,7 @@
                   máy ảnh KTS FUJIFILM</span></span></a>
                 </li>
                 <li class="">
-                  <a href="/pages/chinh-sach-doi-tra" title=
+                  <a href="/Fujifilm_Shop/pages/chinh-sach-doi-tra" title=
                   "Chính sách mua hàng"><span><img src=
                   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
                   class="lazyload img-fluid img-ico" alt=
@@ -121,7 +147,7 @@
                   sách mua hàng</span></span></a>
                 </li>
                 <li class="">
-                  <a href="/pages/chinh-sach-giao-nhan-hang" title=
+                  <a href="/Fujifilm_Shop/pages/chinh-sach-giao-nhan-hang" title=
                   "Chính sách giao nhận hàng"><span><img src=
                   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
                   class="lazyload img-fluid img-ico" alt=
@@ -130,7 +156,7 @@
                   hàng</span></span></a>
                 </li>
                 <li class="">
-                  <a href="/pages/chinh-sach-gia-va-thanh-toan"
+                  <a href="/Fujifilm_Shop/pages/chinh-sach-gia-va-thanh-toan"
                   title=
                   "Chính sách Giá và Thanh toán"><span><img src=
                   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
@@ -140,7 +166,7 @@
                   toán</span></span></a>
                 </li>
                 <li class="">
-                  <a href="/pages/chinh-sach-tra-hang-va-hoan-tien"
+                  <a href="/Fujifilm_Shop/pages/chinh-sach-tra-hang-va-hoan-tien"
                   title=
                   "Chính sách Trả hàng &amp; Hoàn tiền"><span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
                   class="lazyload img-fluid img-ico" alt=
@@ -149,7 +175,7 @@
                   tiền</span></span></a>
                 </li>
                 <li class="">
-                  <a href="/pages/chinh-sach-bao-hanh" title=
+                  <a href="/Fujifilm_Shop/pages/chinh-sach-bao-hanh" title=
                   "Chính sách Bảo hành"><span><img src=
                   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
                   class="lazyload img-fluid img-ico" alt=
@@ -157,7 +183,7 @@
                   sách Bảo hành</span></span></a>
                 </li>
                 <li class="">
-                  <a href="/pages/chinh-sach-bao-mat" title=
+                  <a href="/Fujifilm_Shop/pages/chinh-sach-bao-mat" title=
                   "Chính sách bảo mật"><span><img src=
                   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
                   class="lazyload img-fluid img-ico" alt=
@@ -165,7 +191,7 @@
                   sách bảo mật</span></span></a>
                 </li>
                 <li class="">
-                  <a href="/pages/dieu-khoan-dich-vu" title=
+                  <a href="/Fujifilm_Shop/pages/dieu-khoan-dich-vu" title=
                   "Điều khoản dịch vụ"><span><img src=
                   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
                   class="lazyload img-fluid img-ico" alt=
@@ -173,7 +199,7 @@
                   khoản dịch vụ</span></span></a>
                 </li>
                 <li class="">
-                  <a href="/pages/lien-he" title=
+                  <a href="/Fujifilm_Shop/pages/lien-he" title=
                   "Liên hệ"><span><img src=
                   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
                   class="lazyload img-fluid img-ico" alt="Liên hệ"
@@ -186,72 +212,48 @@
             <nav class="mainNav">
               <ul class="sliderMenu">
                 <li class="">
-                  <a href="/collections/san-pham-moi" title=
+                  <a href="/Fujifilm_Shop/collections/san-pham-moi" title=
                   "SẢN PHẨM MỚI">SẢN PHẨM MỚI</a>
                 </li>
                 <li class="">
-                  <a href="/collections/gfx-series" title=
+                  <a href="/Fujifilm_Shop/collections/gfx-series" title=
                   "GFX SERIES">GFX SERIES</a>
                 </li>
                 <li class="">
-                  <a href="/collections/x-series" title=
+                  <a href="/Fujifilm_Shop/collections/x-series" title=
                   "X SERIES">X SERIES</a>
                 </li>
                 <li class="">
-                  <a href="/collections/ong-kinh" title=
+                  <a href="/Fujifilm_Shop/collections/ong-kinh" title=
                   "ỐNG KÍNH">ỐNG KÍNH</a>
                 </li>
                 <li class="">
-                  <a href="/collections/instax" title=
+                  <a href="/Fujifilm_Shop/collections/instax" title=
                   "INSTAX">INSTAX</a>
                   <ul class="subMenu">
                     <li class="subMenuItem">
-                      <a href="/collections/filminstax" title=
+                      <a href="/Fujifilm_Shop/collections/filminstax" title=
                       "FILM">FILM</a>
                     </li>
                   </ul>
                 </li>
                 <li class="">
-                  <a href="/collections/phu-kien" title=
+                  <a href="/Fujifilm_Shop/collections/phu-kien" title=
                   "PHỤ KIỆN">PHỤ KIỆN</a>
                 </li>
                 <li class="">
-                  <a href="/collections/bundle" title=
+                  <a href="/Fujifilm_Shop/collections/bundle" title=
                   "BUNDLE">BUNDLE</a>
                 </li>
                 <li class="">
-                  <a href="/collections/onsale" title=
+                  <a href="/Fujifilm_Shop/collections/onsale" title=
                   "KHUYẾN MÃI HOT">KHUYẾN MÃI HOT</a>
                 </li>
                 <li class="">
-                  <a href="/blogs/news" title="TIN TỨC">TIN TỨC</a>
+                  <a href="/Fujifilm_Shop/blogs/news" title="TIN TỨC">TIN TỨC</a>
                 </li>
               </ul>
             </nav>
-          </div>
-          <div class="headerMenuMainRight">
-            <div id="policy">
-              <div class="swiper-container">
-                <div class="policyMain swiper-wrapper">
-                  <div class="policyItem swiper-slide">
-                    <span>Đảm bảo đúng hẹn</span> <span>Giao nhanh
-                    toàn quốc</span>
-                  </div>
-                  <div class="policyItem swiper-slide">
-                    <span>Miễn phí vận chuyển</span> <span>Cho mọi
-                    đơn hàng</span>
-                  </div>
-                  <div class="policyItem swiper-slide">
-                    <span>Chính sách Bảo hành</span> <span>Bảo hành
-                    chính hãng tiện lợi và nhanh chóng</span>
-                  </div>
-                  <div class="policyItem swiper-slide">
-                    <span>Khuyến mãi</span> <span>Nhiều Ưu đãi hấp
-                    dẫn</span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -270,13 +272,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/images/gf500mm_665131364c9446a1adc7f721dcf16f1d.jpg" class="d-block w-100" alt="First" />
+        <img src="/Fujifilm_Shop/images/gf500mm_665131364c9446a1adc7f721dcf16f1d.jpg" class="d-block w-100" alt="First" />
       </div>
       <div class="carousel-item">
-        <img src="/images/gfx100sii_8fbc62dbcbca42d296d767c2b36e26e0.jpg" class="d-block w-100" alt="Second" />
+        <img src="/Fujifilm_Shop/images/gfx100sii_8fbc62dbcbca42d296d767c2b36e26e0.jpg" class="d-block w-100" alt="Second" />
       </div>
       <div class="carousel-item">
-        <img src="/images/x-t50_5f740026dab74fc5b709777131550b38.jpg" class="d-block w-100" alt="Third" />
+        <img src="/Fujifilm_Shop/images/x-t50_5f740026dab74fc5b709777131550b38.jpg" class="d-block w-100" alt="Third" />
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -296,13 +298,13 @@
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="/images/fujifilm_octpromotion_lens_desktop_2.png" class="d-block w-100" alt="First" />
+          <img src="/Fujifilm_Shop/images/fujifilm_octpromotion_lens_desktop_2.png" class="d-block w-100" alt="First" />
         </div>
         <div class="carousel-item">
-          <img src="/images/fujifilm_octpromotion_lens_desktop_2.png" class="d-block w-100" alt="Second" />
+          <img src="/Fujifilm_Shop/images/fujifilm_octpromotion_lens_desktop_2.png" class="d-block w-100" alt="Second" />
         </div>
         <div class="carousel-item">
-          <img src="/images/fujifilm_octpromotion_lens_desktop_2.png" class="d-block w-100" alt="Third" />
+          <img src="/Fujifilm_Shop/images/fujifilm_octpromotion_lens_desktop_2.png" class="d-block w-100" alt="Third" />
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -321,7 +323,7 @@
     <div class="container">
       <div class="sectionTitleAll">
         <h2>
-          <a href="/collections/san-pham-moi" style="text-decoration: none; color: #333333; font-weight: bold">Sản phẩm
+          <a href="/Fujifilm_Shop/collections/san-pham-moi" style="text-decoration: none; color: #333333; font-weight: bold">Sản phẩm
             mới</a>
         </h2>
       </div>
@@ -348,7 +350,7 @@
     <div class="container">
       <div class="sectionTitleAll">
         <h2>
-          <a href="/collections/san-pham-moi" style="text-decoration: none; color: #333333; font-weight: bold">Sản phẩm
+          <a href="/Fujifilm_Shop/collections/san-pham-moi" style="text-decoration: none; color: #333333; font-weight: bold">Sản phẩm
             khuyến mãi</a>
         </h2>
       </div>
@@ -370,7 +372,7 @@
                 data-src="https://file.hstatic.net/200000396087/file/gfx100s_98c235a12c7149318a545b93850203ea.png"
                 alt="BannerNEW" />
             </a>
-            <a href="collections/x-series" class="bannerItemContent">
+            <a href="/Fujifilm_Shop/collections/x-series" class="bannerItemContent">
               <h6>Dòng máy Bán Chuyên</h6>
               <h2>X Series</h2>
               <p>
@@ -381,7 +383,7 @@
             </a>
           </div>
           <div class="bannerMainItem">
-            <a href="collections/gfx-series">
+            <a href="/Fujifilm_Shop/collections/gfx-series">
               <img src="https://file.hstatic.net/200000396087/file/untitled-1_7f35e9ffc2a9437ab3ceeb5f8965042d.png"
                 class="img-fluid lazyloaded"
                 data-src="https://file.hstatic.net/200000396087/file/untitled-1_7f35e9ffc2a9437ab3ceeb5f8965042d.png"
@@ -473,13 +475,13 @@
     </div>
   </section>
 
-  <footer id="footer">
+  <footer id="footer" style="background-image: url('/Fujifilm_Shop/images/gallery/footer/starlight_black_slab_web_05828c24ebcb4da4b0ed7b5c9f2145fd.jpg');">
     <div class="container">
       <div class="footerTop">
         <div class="footerTopContent">
           <div class="footerTopContentItemBig">
             <div class="footerLogo">
-              <img style="width: 70%" src="/images/gallery/footer/ffvn_logo_white_879d233c0cd44f39a8c874e4d4ff99e7.png"
+              <img style="width: 70%" src="/Fujifilm_Shop/images/gallery/footer/ffvn_logo_white_879d233c0cd44f39a8c874e4d4ff99e7.png"
                 alt="" class="img-fluid" />
             </div>
             <div class="footerText mt-4">
@@ -536,7 +538,7 @@
               </ul>
             </div>
             <div class="BCT">
-              <img style="width: 50%" src="/images/gallery/footer/logo-bct_5a0bbf4fb2d34c3e88c04df41ad38dc9.png"
+              <img style="width: 50%" src="/Fujifilm_Shop/images/gallery/footer/logo-bct_5a0bbf4fb2d34c3e88c04df41ad38dc9.png"
                 alt="" />
             </div>
           </div>
@@ -586,38 +588,38 @@
             <div class="footerMainList">
               <ul>
                 <li>
-                  <a href="/pages/about-us" title="Về FUJIFILM">Về FUJIFILM</a>
+                  <a href="/Fujifilm_Shop/pages/about-us" title="Về FUJIFILM">Về FUJIFILM</a>
                 </li>
                 <li>
-                  <a href="/pages/gioi-thieu-ve-may-anh-ky-thuat-so-fujifilm" title="Về máy ảnh KTS FUJIFILM">Về máy ảnh
+                  <a href="/Fujifilm_Shop/pages/gioi-thieu-ve-may-anh-ky-thuat-so-fujifilm" title="Về máy ảnh KTS FUJIFILM">Về máy ảnh
                     KTS FUJIFILM</a>
                 </li>
                 <li>
-                  <a href="/pages/chinh-sach-doi-tra" title="Chính sách mua hàng">Chính sách mua hàng</a>
+                  <a href="/Fujifilm_Shop/pages/chinh-sach-doi-tra" title="Chính sách mua hàng">Chính sách mua hàng</a>
                 </li>
                 <li>
-                  <a href="/pages/chinh-sach-giao-nhan-hang" title="Chính sách giao nhận hàng">Chính sách giao nhận
+                  <a href="/Fujifilm_Shop/pages/chinh-sach-giao-nhan-hang" title="Chính sách giao nhận hàng">Chính sách giao nhận
                     hàng</a>
                 </li>
                 <li>
-                  <a href="/pages/chinh-sach-gia-va-thanh-toan" title="Chính sách Giá và Thanh toán">Chính sách Giá và
+                  <a href="/Fujifilm_Shop/pages/chinh-sach-gia-va-thanh-toan" title="Chính sách Giá và Thanh toán">Chính sách Giá và
                     Thanh toán</a>
                 </li>
                 <li>
-                  <a href="/pages/chinh-sach-tra-hang-va-hoan-tien" title="Chính sách Trả hàng &amp; Hoàn tiền">Chính
+                  <a href="/Fujifilm_Shop/pages/chinh-sach-tra-hang-va-hoan-tien" title="Chính sách Trả hàng &amp; Hoàn tiền">Chính
                     sách Trả hàng &amp; Hoàn tiền</a>
                 </li>
                 <li>
-                  <a href="/pages/chinh-sach-bao-hanh" title="Chính sách Bảo hành">Chính sách Bảo hành</a>
+                  <a href="/Fujifilm_Shop/pages/chinh-sach-bao-hanh" title="Chính sách Bảo hành">Chính sách Bảo hành</a>
                 </li>
                 <li>
-                  <a href="/pages/chinh-sach-bao-mat" title="Chính sách bảo mật">Chính sách bảo mật</a>
+                  <a href="/Fujifilm_Shop/pages/chinh-sach-bao-mat" title="Chính sách bảo mật">Chính sách bảo mật</a>
                 </li>
                 <li>
-                  <a href="/pages/dieu-khoan-dich-vu" title="Điều khoản dịch vụ">Điều khoản dịch vụ</a>
+                  <a href="/Fujifilm_Shop/pages/dieu-khoan-dich-vu" title="Điều khoản dịch vụ">Điều khoản dịch vụ</a>
                 </li>
                 <li>
-                  <a href="/pages/lien-he" title="Liên hệ">Liên hệ</a>
+                  <a href="/Fujifilm_Shop/pages/lien-he" title="Liên hệ">Liên hệ</a>
                 </li>
               </ul>
             </div>
@@ -670,11 +672,7 @@
       <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
     </svg>
   </button>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="/js/main.js"></script>
+  <script src="/Fujifilm_Shop/js/main.js"></script>
 </body>
 
 </html>
