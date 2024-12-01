@@ -258,13 +258,13 @@ a:hover, a:focus, button:hover, button:focus, button:visited, form:hover, form:f
     border-bottom: 1px dotted #e1e1e1; 
 }
 
-#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li.active > a {
+#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav ul li a {
     color: #333333; 
-}
-
-#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li > a {
+    text-decoration: none;
+    background-color: transparent;
     display: block; 
 }
+
 
 #header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li > a i {
     border: none !important;
