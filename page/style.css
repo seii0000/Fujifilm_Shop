@@ -250,10 +250,6 @@ a:hover, a:focus, button:hover, button:focus, button:visited, form:hover, form:f
     border: 1px solid #ccc;
 }
 
-#header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li {
-    padding: 10px 0px; 
-}
-
 #header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li:not(:last-child) {
     border-bottom: 1px dotted #e1e1e1; 
 }
@@ -264,7 +260,6 @@ a:hover, a:focus, button:hover, button:focus, button:visited, form:hover, form:f
     background-color: transparent;
     display: block; 
 }
-
 
 #header .headerMenu .headerMenuMain .headerMenuMainLeft .mainNav > ul > li > a i {
     border: none !important;
@@ -643,6 +638,10 @@ img {
 }
 
 /* About-us */
+/* .pageAbout .breadcrumb-shop .breadcrumb-wrap {
+    
+} */
+
 .intro-section {
     height: 500px;
     position: relative;
