@@ -637,6 +637,39 @@ img {
     color: var(--primary-color);
 }
 
+/*User tab pane */
+.modal .modal-dialog {
+    max-width: 800px;
+    min-height: calc(100% - 3.5rem);
+    display: flex;
+    align-items: center;
+    margin: 1.75rem auto;
+    width: auto;
+}
+
+.tab-content {
+    position: relative;
+}
+
+.tab-content:first-child {
+    display: block; /* Ẩn tất cả các tab-pane mặc định */
+}
+
+.tab-pane {
+    display: none; /* Ẩn tất cả các tab-pane mặc định */
+}
+
+div#loginModal .modal-dialog .modal-content .modal-body .nav-link.active {
+    background: rgba(0, 0, 0, 0.03);
+    color: #333333;
+}
+
+.nav-link {
+    border-radius: .25rem;
+    display: block;
+    padding: .5rem 1rem;
+}
+
 /* About-us */
 /* .pageAbout .breadcrumb-shop .breadcrumb-wrap {
     
