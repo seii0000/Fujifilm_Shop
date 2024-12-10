@@ -14,7 +14,7 @@ try {
 
     $user_id = $_SESSION['user_id']; // Assuming user ID is stored in session
 
-    $query = "SELECT username, email, full_name, address, phone_number FROM users WHERE user_id = ?";
+    $query = "SELECT username, email, full_name, address, phone_number, image_path FROM users WHERE user_id = ?";
     $stmt = $conn->prepare($query);
     if (!$stmt) {
         throw new Exception("Failed to prepare statement: " . $conn->error);

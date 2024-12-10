@@ -57,10 +57,10 @@ class UserManager {
     }
 
     // Cập nhật người dùng
-    public function updateUser($user_id, $username, $email, $full_name, $address, $phone_number) {
-        $query = "UPDATE users SET username = ?, email = ?, full_name = ?, address = ?, phone_number = ? WHERE user_id = ?";
+    public function updateUser($user_id, $username, $email, $full_name, $address, $phone_number, $image_path) {
+        $query = "UPDATE users SET username = ?, email = ?, full_name = ?, address = ?, phone_number = ?, image_path = ? WHERE user_id = ?";
         $stmt = $this->conn->prepare($query);
-        $stmt->bind_param("sssssi", $username, $email, $full_name, $address, $phone_number, $user_id);
+        $stmt->bind_param("ssssssi", $username, $email, $full_name, $address, $phone_number, $image_path, $user_id);
         return $stmt->execute();
     }
 
@@ -73,11 +73,11 @@ class UserManager {
     }
 
     // Thêm người dùng mới
-    public function createUser($username, $email, $password, $full_name, $address, $phone_number) {
+    public function createUser($username, $email, $password, $full_name, $address, $phone_number, $image_path) {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $query = "INSERT INTO users (username, email, password_hash, full_name, address, phone_number) VALUES (?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO users (username, email, password_hash, full_name, address, phone_number, image_path) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($query);
-        $stmt->bind_param("ssssss", $username, $email, $hashed_password, $full_name, $address, $phone_number);
+        $stmt->bind_param("sssssss", $username, $email, $hashed_password, $full_name, $address, $phone_number, $image_path);
         return $stmt->execute();
     }
 }

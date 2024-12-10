@@ -123,15 +123,16 @@ $action = isset($_GET['action']) ? $_GET['action'] : null;
                 <div class="table-responsive">
                     <table class="table table-striped table-hover">
                         <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Tên Đăng Nhập</th>
-                                <th>Email</th>
-                                <th>Họ Tên</th>
-                                <th>Số Điện Thoại</th>
-                                <th>Ngày Tạo</th>
-                                <th>Thao Tác</th>
-                            </tr>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên Đăng Nhập</th>
+                            <th>Email</th>
+                            <th>Họ Tên</th>
+                            <th>Số Điện Thoại</th>
+                            <th>Ảnh Đại Diện</th>
+                            <th>Ngày Tạo</th>
+                            <th>Thao Tác</th>
+                        </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($users as $user): ?>
@@ -141,6 +142,7 @@ $action = isset($_GET['action']) ? $_GET['action'] : null;
                                 <td><?= htmlspecialchars($user['email']) ?></td>
                                 <td><?= htmlspecialchars($user['full_name'] ?? 'N/A') ?></td>
                                 <td><?= htmlspecialchars($user['phone_number'] ?? 'N/A') ?></td>
+                                <td><img src="<?php echo htmlspecialchars($user['image_path']); ?>" alt="User Image" width="50"></td>
                                 <td><?= $user['created_at'] ?></td>
                                 <td>
                                     <a href="edit_user.php?id=<?= $user['user_id'] ?>" class="btn btn-warning btn-sm">

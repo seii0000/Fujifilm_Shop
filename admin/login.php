@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header("Location: /Fujifilm_Shop/admin/index.php"); // Redirect to admin dashboard
                 exit();
             } else {
-                header("Location: /Fujifilm_Shop/page/");
+                header("Location: /Fujifilm_Shop/page/account/index.php"); // Redirect to user account page
                 exit();
             }
         } else {
