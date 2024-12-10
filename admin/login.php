@@ -1,0 +1,121 @@
+<?php
+session_start();
+require_once 'C:\xampp\htdocs\Fujifilm_Shop\admin\config\connect.php';
+
+$db = new Database();
+$conn = $db->getConnection();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $email = $_POST['customer']['email'];
+    $password = $_POST['customer']['password'];
+
+    // Log the received email and password
+    error_log("Received email: $email");
+    error_log("Received password: $password");
+
+    $email = mysqli_real_escape_string($conn, $email);
+
+    // Query to check user credentials
+    $sql = "SELECT user_id, username, email, password_hash FROM users WHERE email = '$email'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc();
+
+        // Log the fetched user data
+        error_log("Fetched user data: " . print_r($user, true));
+
+        // Verify password
+        if (password_verify($password, $user['password_hash'])) {
+            // Set session variables
+            $_SESSION['user_id'] = $user['user_id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['email'] = $user['email'];
+
+            // Log successful login
+            error_log("Login successful for user: " . $user['username']);
+
+            // Check if user is admin
+            if ($email === '1@gmail.com') {
+                header("Location: /Fujifilm_Shop/admin/index.php"); // Redirect to admin dashboard
+                exit();
+            } else {
+                header("Location: /Fujifilm_Shop/page/");
+                exit();
+            }
+        } else {
+            // Invalid password
+            $error = "Invalid email or password";
+            error_log("Invalid password for email: $email");
+        }
+    } else {
+        // User not found
+        $error = "Invalid email or password";
+        error_log("User not found for email: $email");
+    }
+
+    // Close connection
+    $conn->close();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Fujifilm_Shop/page/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <div class="my-account-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 offset-md-4 col-sm-6 offset-dm-3 col-12">
+                        <div id="auth-form" class="login-layout">
+                            <div class="auth-heading">
+                                <img src="/Fujifilm_Shop/images/logo/logo.png" alt="" srcset="">
+                                <h1 class="mt-5"><span class="login-form-heading">ĐĂNG NHẬP</span></h1>
+                                <div class="auth-form-body">
+                                    <div class="login-form-body">
+                                    <form accept-charset="UTF-8" action="/Fujifilm_Shop/admin/login.php" id="customer_login" method="post">
+                                        <input name="form_type" type="hidden" value="customer_login">
+                                        <input name="utf8" type="hidden" value="✓">
+                                        <div class="form-group">
+                                            <label for="login-email">Tài khoản*</label>
+                                            <input type="email" id="login-email" class="form-control" name="customer[email]" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="login-password">Mật khẩu*</label>
+                                            <input type="password" id="login-password" class="form-control" name="customer[password]" required="">
+                                        </div>
+                                        <div class="auth-recover-btn">
+                                            <a href="#" data-layout="recover-layout" class="auth-layout-trigger">Quên mật khẩu?</a>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary">
+                                                ĐĂNG NHẬP
+                                            </button>
+                                        </div>
+                                        <div class="auth-back-btn">
+                                            <a href="/Fujifilm_Shop/page/account/register.php">Đăng ký</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="/Fujifilm_Shop/js/loadHeaderFooter.js"></script>
+    <script src="/Fujifilm_Shop/js/main.js"></script>
+</body>
+</html>
