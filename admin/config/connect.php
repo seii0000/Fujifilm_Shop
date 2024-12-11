@@ -74,10 +74,9 @@ class UserManager {
 
     // Thêm người dùng mới
     public function createUser($username, $email, $password, $full_name, $address, $phone_number, $image_path) {
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $query = "INSERT INTO users (username, email, password_hash, full_name, address, phone_number, image_path) VALUES (?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($query);
-        $stmt->bind_param("sssssss", $username, $email, $hashed_password, $full_name, $address, $phone_number, $image_path);
+        $stmt->bind_param("sssssss", $username, $email, $password, $full_name, $address, $phone_number, $image_path);
         return $stmt->execute();
     }
 }
@@ -187,6 +186,54 @@ class ProductManager {
         $query = "DELETE FROM products WHERE product_id = ?";
         $stmt = $this->conn->prepare($query);
         $stmt->bind_param("i", $product_id);
+        return $stmt->execute();
+    }
+}
+
+class CartManager {
+    private $conn;
+
+    public function __construct($connection) {
+        $this->conn = $connection;
+    }
+
+    public function countCartItems($user_id) {
+        $query = "SELECT COUNT(*) as total FROM cart_items WHERE user_id = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("i", $user_id);
+        $stmt->execute();
+        return $stmt->get_result()->fetch_assoc()['total'];
+    }
+
+    public function getCartItems($user_id) {
+        $query = "SELECT ci.quantity, p.product_name, p.product_handle, p.description, p.price, p.compare_price, p.image_path
+                  FROM cart_items ci
+                  JOIN products p ON ci.product_id = p.product_id
+                  WHERE ci.user_id = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("i", $user_id);
+        $stmt->execute();
+        return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function addCartItem($user_id, $product_id, $quantity) {
+        $query = "INSERT INTO cart_items (user_id, product_id, quantity) VALUES (?, ?, ?)";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("iii", $user_id, $product_id, $quantity);
+        return $stmt->execute();
+    }
+
+    public function updateCartItem($user_id, $product_id, $quantity) {
+        $query = "UPDATE cart_items SET quantity = ? WHERE user_id = ? AND product_id = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("iii", $quantity, $user_id, $product_id);
+        return $stmt->execute();
+    }
+
+    public function deleteCartItem($user_id, $product_id) {
+        $query = "DELETE FROM cart_items WHERE user_id = ? AND product_id = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("ii", $user_id, $product_id);
         return $stmt->execute();
     }
 }

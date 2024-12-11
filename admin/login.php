@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'C:\xampp\htdocs\Fujifilm_Shop\admin\config\connect.php';
+require_once 'C:/xampp/htdocs/Fujifilm_Shop/admin/config/connect.php';
 
 $db = new Database();
 $conn = $db->getConnection();
@@ -37,11 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 exit();
             }
         } else {
-            // Invalid password
             $error = "Tài khoản hoặc mật khẩu không chính xác";
         }
     } else {
-        // User not found
         $error = "Tài khoản hoặc mật khẩu không chính xác";
     }
 

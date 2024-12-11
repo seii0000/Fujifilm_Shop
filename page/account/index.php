@@ -43,7 +43,7 @@ if (isset($_SESSION['user_id'])) {
                     <div class="mt-5 account-sidebar-menu">
                         <ul>
                             <li><a href="/Fujifilm_Shop/page/account/index.php" class="active">Account information</a></li>
-                            <li><a href="/account?view=orders">Purchase history</a></li>
+                            <li><a href="/Fujifilm_Shop/page/account/view.php">Purchase history</a></li>
                             <li><a href="/Fujifilm_Shop/page/account/addresses.php">Address List</a></li>
                             <li><a href="/Fujifilm_Shop/page/account/logout.php">Log out</a></li>
                         </ul>
