@@ -5,13 +5,12 @@ require_once 'C:\xampp\htdocs\Fujifilm_Shop\admin\config\connect.php';
 $db = new Database();
 $conn = $db->getConnection();
 
+// Initialize error variable
+$error = '';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['customer']['email'];
     $password = $_POST['customer']['password'];
-
-    // Log the received email and password
-    error_log("Received email: $email");
-    error_log("Received password: $password");
 
     $email = mysqli_real_escape_string($conn, $email);
 
@@ -22,18 +21,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
 
-        // Log the fetched user data
-        error_log("Fetched user data: " . print_r($user, true));
-
         // Verify password
         if (password_verify($password, $user['password_hash'])) {
             // Set session variables
             $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
-
-            // Log successful login
-            error_log("Login successful for user: " . $user['username']);
 
             // Check if user is admin
             if ($email === '1@gmail.com') {
@@ -45,13 +38,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             }
         } else {
             // Invalid password
-            $error = "Invalid email or password";
-            error_log("Invalid password for email: $email");
+            $error = "Tài khoản hoặc mật khẩu không chính xác";
         }
     } else {
         // User not found
-        $error = "Invalid email or password";
-        error_log("User not found for email: $email");
+        $error = "Tài khoản hoặc mật khẩu không chính xác";
     }
 
     // Close connection
@@ -68,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Document</title>
+    <title>Đăng Nhập</title>
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -81,6 +72,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <div class="auth-heading">
                                 <img src="/Fujifilm_Shop/images/logo/logo.png" alt="" srcset="">
                                 <h1 class="mt-5"><span class="login-form-heading">ĐĂNG NHẬP</span></h1>
+                                
+                                <!-- Error Message Display -->
+                                <?php if (!empty($error)): ?>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <?php echo htmlspecialchars($error); ?>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                                <?php endif; ?>
+                                
                                 <div class="auth-form-body">
                                     <div class="login-form-body">
                                     <form accept-charset="UTF-8" action="/Fujifilm_Shop/admin/login.php" id="customer_login" method="post">

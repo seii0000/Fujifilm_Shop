@@ -14,12 +14,12 @@
 
     <div id="collection">
         <div class="breadcrumb-shop">
-        <div style="padding: 10px 10px; margin-bottom: 20px;" class="breadcrumb-wrap container container-xl">
-            <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a style="color: #333; text-decoration: none;" href="/Fujifilm_Shop/page">Trang chủ</a></li>
-            <li class="breadcrumb-item active"><span>SẢN PHẨM MỚI</span></li>
-            </ol>
-        </div>
+            <div style="padding: 10px 10px; margin-bottom: 20px;" class="breadcrumb-wrap container container-xl">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a style="color: #333; text-decoration: none;" href="/Fujifilm_Shop/page">Trang chủ</a></li>
+                <li class="breadcrumb-item active"><span>SẢN PHẨM MỚI</span></li>
+                </ol>
+            </div>
         </div>
         <div class="collectionMain">
             <div class="container">
@@ -103,30 +103,586 @@
                     </div>
                     <div class="collectionMainContentRight">
                         <div class="collectionHeader">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-12 col-3">
-                            <!-- <div class="filterMobile headerTool"><a href="" data-type="sidebarAllFilter"><i class="lni lni-funnel"></i> Bộ lọc</a></div> -->
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12 col-3">
+                                <!-- <div class="filterMobile headerTool"><a href="" data-type="sidebarAllFilter"><i class="lni lni-funnel"></i> Bộ lọc</a></div> -->
+                                </div>
+                                <div style="text-align: right;" class="col-md-8 col-9">
+                                <div class="sortByMain">
+                                    <label class="collectionHeaderRow" for="sortBy">Sắp xếp theo:</label>
+                                    <select id="sortBy" class="form-control">
+                                    <option value="manual">Sản phẩm nổi bật</option>
+                                    <option value="price-ascending" data-filter="&amp;sortby=(price:product=asc)">Giá: Tăng dần</option>
+                                    <option value="price-descending" data-filter="&amp;sortby=(price:product=desc)">Giá: Giảm dần</option>
+                                    <option value="title-ascending" data-filter="&amp;sortby=(title:product=asc)">Tên: A-Z</option>
+                                    <option value="title-descending" data-filter="&amp;sortby=(price:product=desc)">Tên: Z-A</option>
+                                    <option value="created-ascending" data-filter="&amp;sortby=(updated_at:product=desc)">Cũ nhất</option>
+                                    <option value="created-descending" data-filter="&amp;sortby=(updated_at:product=asc)">Mới nhất</option>
+                                    <option value="best-selling" data-filter="&amp;sortby=(sold_quantity:product=desc)">Bán chạy nhất</option>
+                                    <option value="quantity-descending">Tồn kho: Giảm dần</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div style="text-align: right;" class="col-md-8 col-9">
-                            <div class="sortByMain">
-                                <label class="collectionHeaderRow" for="sortBy">Sắp xếp theo:</label>
-                                <select id="sortBy" class="form-control">
-                                <option value="manual">Sản phẩm nổi bật</option>
-                                <option value="price-ascending" data-filter="&amp;sortby=(price:product=asc)">Giá: Tăng dần</option>
-                                <option value="price-descending" data-filter="&amp;sortby=(price:product=desc)">Giá: Giảm dần</option>
-                                <option value="title-ascending" data-filter="&amp;sortby=(title:product=asc)">Tên: A-Z</option>
-                                <option value="title-descending" data-filter="&amp;sortby=(price:product=desc)">Tên: Z-A</option>
-                                <option value="created-ascending" data-filter="&amp;sortby=(updated_at:product=desc)">Cũ nhất</option>
-                                <option value="created-descending" data-filter="&amp;sortby=(updated_at:product=asc)">Mới nhất</option>
-                                <option value="best-selling" data-filter="&amp;sortby=(sold_quantity:product=desc)">Bán chạy nhất</option>
-                                <option value="quantity-descending">Tồn kho: Giảm dần</option>
-                                </select>
-                            </div>
-                            </div>
-                        </div>
                         </div>
                         <div class="collectionBody">
                         <!-- Products -->
+                            <div class="collectionListProduct">
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="proLoop">
+                                    <div class="productImg">
+                                        <div class="wrapper_tag">
+                                            <span class="productSale">-11%</span>
+                                            <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II" class="productImgLink">     
+                                                <div class="image-container">
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siifront.png" 
+                                                         class="primary-image" 
+                                                         alt="FUJIFILM GFX100S II Front"/>
+                                                    <img src="/Fujifilm_Shop/images/gallery/PRODUCT/gfx_series/gfx100sii/gfx100siiback.png" 
+                                                         class="secondary-image" 
+                                                         alt="FUJIFILM GFX100S II Back"/>
+                                                </div>
+                                            </a>
+                                            <div class="productAction">
+                                                <a href="" class="setAddCartLoop" data-id="1123318681" title="Thêm vào giỏ">
+                                                    <svg width="18" height="18" style="fill:#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"> <g> <g> <path d="M443.188,442.208L415.956,142.56c-0.768-8.256-7.68-14.56-15.968-14.56h-48V96c0-25.728-9.952-49.888-28.032-67.968 C305.876,9.952,281.716,0,255.988,0c-52.928,0-96,43.072-96,96v32h-48c-8.288,0-15.2,6.304-15.936,14.56L68.82,442.208 c-1.632,17.856,4.384,35.712,16.48,48.96S114.612,512,132.564,512h246.88c17.952,0,35.168-7.584,47.264-20.832 S444.788,460.064,443.188,442.208z M191.988,96c0-35.296,28.704-64,64-64c17.184,0,33.28,6.624,45.344,18.656 c12.064,12.032,18.656,28.16,18.656,45.344v32h-128V96z M403.06,469.6c-6.144,6.688-14.528,10.4-23.648,10.4H132.564 c-9.088,0-17.504-3.712-23.616-10.432c-6.144-6.72-9.056-15.392-8.224-24.48L126.612,160h33.376v48c0,8.832,7.168,16,16,16 c8.832,0,16-7.168,16-16v-48h128v48c0,8.832,7.168,16,16,16c8.832,0,16-7.168,16-16v-48h33.376l25.92,285.12 C412.116,454.176,409.204,462.88,403.06,469.6z"></path> </g> </g> </svg>
+                                                </a> 
+                                                <a title="Xem nhanh" class="setQuickview" data-handle="fujifilm-gfx100s-ii" data-toggle="modal" data-target="#quickviewLogin" data-whatever="@quickviewLogin"><i class="lni lni-search"></i></a>
+                                                <a title="Yêu thích"  class="setWishlist" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-heart"></i></a>
+                                                <a title="So sánh" class="setCompare" data-handle="fujifilm-gfx100s-ii"><i class="lni lni-shuffle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="productDetail">
+                                        <div class="productDetailMain">
+                                            <h3 class="productName">
+                                                <a href="/products/fujifilm-gfx100s-ii" title="FUJIFILM GFX100S II">FUJIFILM GFX100S II</a>
+                                            </h3>
+                                            <div class="productPriceMain">	
+                                                <p class="productPrice">118,490,000₫
+                                                    <span class="productPriceDel"><del>132,990,000₫</del></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -240,5 +796,28 @@
   
     <script src="/Fujifilm_Shop/js/main.js"></script>
     <script src="/Fujifilm_Shop/js/loadHeaderFooter.js"></script>
-  </body>
+    <script>
+        document.querySelectorAll('.image-container').forEach(container => {
+            const primaryImage = container.querySelector('.primary-image');
+            const secondaryImage = container.querySelector('.secondary-image');
+
+            // Preload secondary image
+            if (secondaryImage.src) {
+                const img = new Image();
+                img.src = secondaryImage.src;
+            }
+
+            // Add loading state
+            container.addEventListener('mouseenter', () => {
+                if (!secondaryImage.complete) {
+                    container.classList.add('loading');
+                }
+            });
+
+            secondaryImage.addEventListener('load', () => {
+                container.classList.remove('loading');
+            });
+        });
+    </script>
+</body>
 </html>
