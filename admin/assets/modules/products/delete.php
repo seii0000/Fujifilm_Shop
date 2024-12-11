@@ -10,20 +10,18 @@ if (!isset($_SESSION['user_id']) || $_SESSION['email'] !== '1@gmail.com') {
 
 $db = new Database();
 $conn = $db->getConnection();
-$newsManager = new NewsManager($conn);
+$productManager = new ProductManager($conn);
 
 if (isset($_GET['id'])) {
-    $news_id = (int)$_GET['id'];
+    $product_id = (int)$_GET['id'];
     
-    if ($newsManager->deleteNews($news_id)) {
+    if ($productManager->deleteProduct($product_id)) {
         header("Location: index.php?success=1&action=delete");
         exit();
     } else {
         // Handle error if unable to delete
-        echo "Không thể xóa tin tức";
+        echo "Không thể xóa sản phẩm";
     }
-} else {
-    header("Location: index.php");
-    exit();
-}
+} 
+
 ?>

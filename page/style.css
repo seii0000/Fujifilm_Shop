@@ -18,6 +18,7 @@ ul, ol {
 a {
     color: #333333; 
 }
+
 *{
     text-decoration: none;
 }
@@ -1180,6 +1181,234 @@ div#loginModal .modal-dialog .modal-content .modal-body .btn-facebook-login .pre
     color: #00916d;
     text-decoration: none;
 }
+/* Modal QuickView */
+.modal-body {
+    padding: 20px;
+}
+
+.product-images {
+    margin-bottom: 20px;
+}
+
+.price-box {
+    margin: 15px 0;
+}
+
+.current-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity-controls input {
+    width: 60px;
+    text-align: center;
+}
+
+.modal-dialog {
+    max-width: 800px;
+}
+
+/* Side bar  */
+
+.sidebarAllMainCart {
+    background: #fff;
+    position: fixed;
+    width: 300px;
+    top: 0;
+    right: -300px;
+    height: 100%;
+    box-shadow: 0px 2px 4px rgba(40, 40, 40, 0.2);
+    transition: all 0.3s linear;
+    /* transform: translateX(100%); */
+    z-index: 10000;
+    overflow-y: scroll;
+}
+
+.sidebarAllMainCart.open {
+    right: 0;
+}
+
+.sidebarAllMainCart .sidebarAllHeader {
+    background: #f5f6fa;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.sidebarAllMainCart .sidebarAllHeader .closeSidebar {
+    float: left;
+    margin-left: 20px;
+}
+
+.sidebarAllMainCart .sidebarAllHeader span:last-child {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.sidebarAllMainCart .sidebarAllBody {
+    margin: 20px;
+}
+
+.sidebarAllMainCart .sidebarAllBody .itemMain {
+    display: flex;
+    padding: 15px 0px;
+    border-bottom: 1px dotted #e1e1e1;
+}
+
+.sidebarAllMainCart .sidebarAllBody .itemMain > a {
+    display: block;
+    width: 75px;
+    margin-right: 10px;
+    height: auto;
+}
+
+.sidebarAllMainCart .sidebarAllBody .itemMain .itemTitle {
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+}
+
+.sidebarAllMainCart .sidebarAllBody .itemMain .itemTitle:hover {
+    color: #00916d;
+}
+
+.sidebarAllMainCart .sidebarAllBody .itemMain .itemVariant {
+    font-size: 11px;
+}
+
+.sidebarAllMainCart .sidebarAllBody .itemMain .itemPriceInfo {
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.sidebarAllMainCart .sidebarAllBody .itemMain .itemPriceInfo .itemPriceMain {
+    display: block;
+    color: #ff1616;
+}
+
+.sidebarAllMainCart .sidebarAllBody .itemMain .itemAction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebarAllMainCart .sidebarAllFooter {
+    margin: 20px;
+}
+
+.sidebarAllMainCart .sidebarAllFooter a {
+    text-decoration: none;
+}
+
+.sidebarAllPolicy {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.sidebarAllPolicy input {
+    margin: 0 15px 0 0;
+    cursor: pointer;
+}
+
+.sidebarAllMainCart .sidebarAllFooter .totalPrice {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebarAllFooter .totalPrice span:last-child {
+    color: #ff1616;
+    font-weight: 700;
+}
+
+.sidebarAllMainCart .sidebarAllFooter .mainCartButton.continue {
+    background: #000 !important;
+    text-align: center;
+}
+
+.sidebarAllMainCart .sidebarAllFooter .mainCartButton {
+    display: block;
+    cursor: pointer;
+    background: #00916d;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px;
+    padding: 10px;
+    color: #e2e2e2;
+}
+
+.sidebarAllMainCart .sidebarAllFooter .mainCartButton {
+    display: block;
+    cursor: pointer;
+    background: #00916d;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px;
+    padding: 10px;
+    color: #e2e2e2;
+}
+
+.groupAdd {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.groupAdd .itemQuantity {
+    display: flex;
+    width: 50%;
+}
+
+.groupAdd .itemQuantity .qtyBtn {
+    background: none;
+    border: 1px solid #ccc;
+    height: 25px;
+    width: 25px;
+}
+
+.groupAdd .itemQuantity input {
+    height: 25px;
+    width: 50px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    text-align: center;
+}
+
+.groupAdd .itemQuantity .qtyBtn {
+    background: none;
+    border: 1px solid #ccc;
+    height: 25px;
+    width: 25px;
+}
+
+.sidebarAllMainCart .sidebarAllBody .itemMain .itemAction .removeItem {
+    cursor: pointer;
+    margin-left: 20px;
+}
+
 
 /* Collection */
 #collection .collectionMain {
@@ -1692,6 +1921,23 @@ a#loadColorFilter, a.loadNotColorFilter {
     cursor: pointer;
     border-radius: 50%;
     text-decoration: none;
+}
+
+.proLoop .productAction button {
+    color: #fff;
+    background: #00916d;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    text-decoration: none;
+    border: none;
 }
 
 .proLoop .productAction a:hover {

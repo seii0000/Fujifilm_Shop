@@ -2,7 +2,7 @@
 session_start();
 require_once 'C:/xampp/htdocs/Fujifilm_Shop/admin/config/connect.php';
 
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_id']) || $_SESSION['email'] !== '1@gmail.com') {
     header("Location: /Fujifilm_Shop/admin/login.php");
     exit();
 }

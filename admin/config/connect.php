@@ -137,4 +137,57 @@ class NewsManager {
     }
 }
 
+class ProductManager {
+    private $conn;
+
+    public function __construct($connection) {
+        $this->conn = $connection;
+    }
+
+    public function countProducts() {
+        $result = $this->conn->query("SELECT COUNT(*) as total FROM products");
+        return $result->fetch_assoc()['total'];
+    }
+
+    public function getAllProducts($limit = 10, $offset = 0) {
+        $query = "SELECT * FROM products ORDER BY created_at DESC LIMIT ? OFFSET ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("ii", $limit, $offset);
+        $stmt->execute();
+        return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+    }
+
+    // Get product by ID
+    public function getProductById($product_id) {
+        $query = "SELECT * FROM products WHERE product_id = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("i", $product_id);
+        $stmt->execute();
+        return $stmt->get_result()->fetch_assoc();
+    }
+
+    // Add new product
+    public function addProduct($product_name, $product_handle, $description, $price, $category_id, $image_path) {
+        $query = "INSERT INTO products (product_name, product_handle, description, price, category_id, image_path) VALUES (?, ?, ?, ?, ?, ?)";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("sssdis", $product_name, $product_handle, $description, $price, $category_id, $image_path);
+        return $stmt->execute();
+    }
+
+    // Update product
+    public function updateProduct($product_id, $product_name, $product_handle, $description, $price, $category_id, $image_path) {
+        $query = "UPDATE products SET product_name = ?, product_handle = ?, description = ?, price = ?, category_id = ?, image_path = ? WHERE product_id = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("sssdisi", $product_name, $product_handle, $description, $price, $category_id, $image_path, $product_id);
+        return $stmt->execute();
+    }
+
+    // Delete product
+    public function deleteProduct($product_id) {
+        $query = "DELETE FROM products WHERE product_id = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("i", $product_id);
+        return $stmt->execute();
+    }
+}
 ?>

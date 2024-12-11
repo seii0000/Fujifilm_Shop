@@ -1,5 +1,12 @@
 <?php
+session_start();
 require_once 'C:/xampp/htdocs/Fujifilm_Shop/admin/config/connect.php';
+
+// Check if user is logged in and is admin
+if (!isset($_SESSION['user_id']) || $_SESSION['email'] !== '1@gmail.com') {
+    header("Location: /Fujifilm_Shop/admin/login.php");
+    exit();
+}
 
 $db = new Database();
 $conn = $db->getConnection();
