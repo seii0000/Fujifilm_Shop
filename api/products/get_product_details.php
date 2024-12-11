@@ -6,11 +6,11 @@ try {
     $db = new Database();
     $conn = $db->getConnection();
 
-    // Get product handle from URL parameter
-    $productHandle = isset($_GET['handle']) ? $_GET['handle'] : null;
+    // Get product ID from URL parameter
+    $productId = isset($_GET['id']) ? $_GET['id'] : null;
 
-    if (!$productHandle) {
-        throw new Exception('Product handle is required');
+    if (!$productId) {
+        throw new Exception('Product ID is required');
     }
 
     // Fetch product data
@@ -24,10 +24,10 @@ try {
         c.category_name
     FROM products p
     LEFT JOIN categories c ON p.category_id = c.category_id
-    WHERE p.product_handle = ?";
+    WHERE p.product_id = ?";
 
     $stmt = $conn->prepare($query);
-    $stmt->bind_param("s", $productHandle);
+    $stmt->bind_param("i", $productId);
     $stmt->execute();
     $result = $stmt->get_result();
     $product = $result->fetch_assoc();
