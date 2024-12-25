@@ -428,12 +428,7 @@
                     button.addEventListener('click', function(e) {
                         e.preventDefault();
                         const productId = this.getAttribute('data-id');
-
-                        if (!productId || productId === "undefined") {
-                            console.error('Invalid product ID');
-                            return;
-                        }
-
+                        
                         // Fetch product data
                         fetch(`/Fujifilm_Shop/api/products/get_product_details.php?id=${productId}`)
                             .then(response => response.json())
@@ -441,11 +436,11 @@
                                 if (data.status === 'success') {
                                     const product = data.data;
                                     // Update modal content
-                                    document.getElementById('quickview-title').textContent = product.title;
+                                    document.getElementById('quickview-title').textContent = product.product_name;
                                     document.getElementById('quickview-price').textContent = product.price;
-                                    document.getElementById('quickview-old-price').textContent = product.compare_at_price || '';
+                                    document.getElementById('quickview-old-price').textContent = product.compare_price || '';
                                     document.getElementById('quickview-description').innerHTML = product.description;
-                                    document.getElementById('quickview-image').src = product.featured_image;
+                                    document.getElementById('quickview-image').src = product.image_path;
                                     document.getElementById('add-to-cart-button').setAttribute('data-product-id', product.product_id);
                                     
                                     // Show modal

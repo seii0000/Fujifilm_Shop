@@ -9,17 +9,11 @@
       </div>
       <div class="headerCenter">
         <div class="headerSearch">
-          <form action="/search" class="headerSearch">
-            <div class="headerSearchMain">
-              <input type="hidden" name="type" value="product" />
-              <input required="" name="q" maxlength="40" autocomplete="off" class="headerSearchInput searchinput input-search search-input" type="text" size="20" placeholder="Tìm kiếm sản phẩm..." aria-label="Search" />
-            </div>
+          <form action="/Fujifilm_Shop/search.php" method="get" class="search-form">
+            <input style="width: 90%;" type="text" name="query" placeholder="Search for products..." required>
+            <button style="background-color: #00916D; color: #fff;" type="submit" class="btn">Search</button>
           </form>
-          <button type="submit" class="headerSearchButton">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85zm-5.442 1.398a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/>
-            </svg>
-          </button>
+          
           <div class="headerSmartSearch">
             <div class="headerSmartSearchResult"></div>
           </div>

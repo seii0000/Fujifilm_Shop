@@ -21,6 +21,23 @@ $total_pages = ceil($total_users / $limit);
 
 $users = $userManager->getAllUsers($limit, $offset);
 
+$search_query = isset($_GET['query']) ? $_GET['query'] : '';
+
+// Fetch users based on search query
+if (!empty($search_query)) {
+    $search_query = "%" . $conn->real_escape_string($search_query) . "%";
+    $query = "SELECT user_id, username, email, full_name, phone_number, image_path, created_at FROM users WHERE username LIKE ? OR email LIKE ? OR full_name LIKE ? OR phone_number LIKE ?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("ssss", $search_query, $search_query, $search_query, $search_query);
+} else {
+    $query = "SELECT user_id, username, email, full_name, phone_number, image_path, created_at FROM users";
+    $stmt = $conn->prepare($query);
+}
+
+$stmt->execute();
+$result = $stmt->get_result();
+$users = $result->fetch_all(MYSQLI_ASSOC);
+
 // Kiểm tra trạng thái thao tác
 $success = isset($_GET['success']) ? $_GET['success'] : null;
 $action = isset($_GET['action']) ? $_GET['action'] : null;
@@ -122,6 +139,12 @@ $action = isset($_GET['action']) ? $_GET['action'] : null;
             <main class="col-md-10 ms-sm-auto px-md-4">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Quản Lý Người Dùng</h1>
+                    <form method="get" class="mb-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="query" placeholder="Search users..." value="<?= htmlspecialchars(isset($_GET['query']) ? $_GET['query'] : '') ?>">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </form>
                     <a href="add_user.php" class="btn btn-primary">
                         <i class="fas fa-plus"></i> Thêm Người Dùng Mới
                     </a>

@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <input type="password" id="login-password" class="form-control" name="customer[password]" required="">
                                         </div>
                                         <div class="auth-recover-btn">
-                                            <a href="#" data-layout="recover-layout" class="auth-layout-trigger">Quên mật khẩu?</a>
+                                            <a href="/Fujifilm_Shop/page/account/password_forget.php" data-layout="recover-layout" class="auth-layout-trigger">Quên mật khẩu?</a>
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary">
